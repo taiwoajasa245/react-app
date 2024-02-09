@@ -8,10 +8,12 @@ interface Props {
 
 const Button = ({ children, color, onClick }: Props) => {
   return (
-    <button onClick={onClick} className={"btn btn-" + color}>
-      {" "}
-      {children}{" "}
-    </button>
+    <div className="flex ">
+      <button onClick={onClick} className={"btn m-2 btn-" + color}>
+        {" "}
+        {children}{" "}
+      </button>
+    </div>
   );
 };
 

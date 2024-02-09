@@ -6,11 +6,10 @@ import { useState } from "react";
 interface listGroupProps {
   items: string[];
   heading: string;
-  onSelecItem: (item: string) => void; 
+  onSelecItem: (item: string) => void;
 }
 
 function ListGroup({ items, heading, onSelecItem }: listGroupProps) {
-
   //  const message = items.length === 0 ? <p> This list is empty </p> : null;
   const message = items.length === 0 && <p> This list is empty </p>; // this is a better way to doing it
 
@@ -24,12 +23,14 @@ function ListGroup({ items, heading, onSelecItem }: listGroupProps) {
         {items.map((item, index) => (
           <li
             className={
-              select === index ? "list-group-item active" : "list-group-item"
+              select === index
+                ? "list-group-item active m-2"
+                : "list-group-item m-2"
             }
             key={index}
             onClick={() => {
               setSelect(index);
-              onSelecItem(item)
+              onSelecItem(item);
             }}
           >
             {item}
