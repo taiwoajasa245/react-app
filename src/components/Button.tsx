@@ -13,7 +13,7 @@ const Button = ({ children, color, onClick }: Props) => {
         {" "}
         {children}{" "}
       </button>
-    </div>
+    </div> 
   );
 };
 
